@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Inicio</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="{%static 'DBweb_muebles/assets/favicon.ico' %}" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{%static 'DBweb_muebles/css/styles.css' %}" rel="stylesheet" />
+        <link href="{%static 'DBweb_muebles/css/miestilo.css' %}" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-dark bg-dark static-top">
+            <div class="container">
+                <a class="navbar-brand" href="/DBweb_muebles/home">Inicio</a>´
+                <a class="navbar-brand" href="/DBweb_muebles/Sillon">Sillones</a>´
+                <a class="navbar-brand" href="/DBweb_muebles/Mesa">Mesas</a>´
+                <a class="navbar-brand" href="/DBweb_muebles/Armario">Armarios</a>´
+                <a class="navbar-brand" href="/admin">Admin</a>´
+   
+            </div>
+        </nav>
+    <div class="contenido">
+        {%block contenido %}
+        <p> Home </p>
+        {%endblock%}
+    <div>    
+    </body>
+</html>

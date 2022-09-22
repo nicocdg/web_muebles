@@ -1,0 +1,41 @@
+{% extends "home.html" %}
+
+{% load static%}
+
+{%block contenido %}
+<p> Sillones PREMIUM </p>
+<div class="contenidoSillones">
+    <form class="formDataSillones" action="/DBweb_muebles/Sillon/" method="POST">
+        {% csrf_token %}
+        <input type="text" name="modelo" placeholder="Modelo">
+        <input type="text" name="material" placeholder="Material">
+        <input type="text" name="cuerpos" placeholder="Cuerpos">
+        <button type="submit" class="btn btn-primary btndj">Guardar</button>  <!-- submit its for specify what this is a button for the form class action -->
+    </form>
+</div>
+
+<div>
+    <form class="formDataSillones" action="/DBweb_muebles/buscar_sillones/" method="GET"> 
+        <input type="text" name="modelo" placeholder="Modelo">
+        <button type="submit" class="btn btn-primary btndj">Buscar</button>
+    </form>
+</div>
+
+<div>
+    {% if sillon_busqueda %}
+    <ul>
+        {% for x in sillon_busqueda %}        
+        Modelo: {{ x.modelo}}
+        <p></p>
+        Material: {{ x.material}}       
+        <p></p>
+        Cuerpos: {{ x.cuerpos}}
+        <p></p>
+        {% endfor %}
+    </ul>
+    {% else %} 
+    <p><h5>No se encontraron datos</h5></p>
+    {% endif %}
+</div>
+
+{%endblock%}

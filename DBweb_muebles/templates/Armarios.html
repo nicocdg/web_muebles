@@ -1,0 +1,44 @@
+{% extends "home.html" %}
+
+{% load static%}
+
+
+{%block contenido %}
+<p> Armarios PREMIUM </p>
+<div class="contenidoArmarios">
+    <form class="formDataArmarios" action="/DBweb_muebles/Armario/" method="POST">
+        {% csrf_token %}
+        <input type="text" name="modelo" placeholder="Modelo">
+        <input type="text" name="material" placeholder="Material">
+        <input type="text" name="puertas" placeholder="Puertas">
+        <button type="submit" class="btn btn-primary btndj">Guardar</button>  <!-- submit its for specify what this is a button for the form class action -->
+    </form>
+</div>
+
+<div>
+    <form class="formDataArmarios" action="/DBweb_muebles/buscar_armarios/" method="GET"> 
+        <input type="text" name="modelo" placeholder="Modelo">
+        <button type="submit" class="btn btn-primary btndj">Buscar</button>
+    </form>
+</div>
+
+<div>
+    {% if armario_busqueda %}
+    <ul>
+        {% for x in armario_busqueda %} 
+        Modelo: {{ x.modelo}}
+        <p></p>
+        Material: {{ x.material}}
+        <p></p>
+        Puertas: {{ x.puertas}}
+        <p></p>
+        {% endfor %}
+    </ul>
+    {% else %} 
+    <p><h5>No se encontraron datos</h5></p>
+    {% endif %}
+</div>
+
+
+
+{%endblock%}

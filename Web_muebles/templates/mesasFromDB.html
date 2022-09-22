@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Entregable | FromDB</title>
+</head>
+<body style="background-color:grey;">
+    Data from DBsqlite<br>
+    Showing a list using python coding:<br>
+    <!-- python code inside html code-->
+    <!--  not is recommended code in python inside a html file, is just for simple things -->
+    <br>
+    {%for n in dataListDB%}
+    Modelo:
+    {{n.modelo}}<br>
+    Material:
+    {{n.material}}<br>
+    Capacidad de personas:
+    {{n.capacidadPersonas}}<br>
+    <br>
+    {%endfor%}
+</body>
+</html>

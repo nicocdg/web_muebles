@@ -1,0 +1,9 @@
+.contenido{
+    position: relative;
+    top: 60px;
+    border: 1px solid red;
+    /*display: flex;
+    flex-direction: column;*/
+    width: px;
+    gap: 10px;
+}
